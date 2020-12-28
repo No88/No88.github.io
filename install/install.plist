@@ -13,6 +13,18 @@
 					<key>url</key>
 					<string>https://5aisport-new.oss-cn-shenzhen.aliyuncs.com/iOS/image/20201217/fsw.signed.ipa</string>
 				</dict>
+				<dict>
+                    <key>kind</key>
+                    <string>display-image</string>
+                    <key>url</key>
+                    <string>https://5aisport-new.oss-cn-shenzhen.aliyuncs.com/iOS/image/20201217/icon.png</string>
+                </dict>
+                <dict>
+                    <key>kind</key>
+                    <string>full-size-image</string>
+                    <key>url</key>
+                    <string>https://5aisport-new.oss-cn-shenzhen.aliyuncs.com/iOS/image/20201217/icon.png</string>
+                </dict>
 			</array>
 			<key>metadata</key>
 			<dict>
