@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NewPod 隐私政策</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>NewPod 隐私政策</h1>
+    <p class="meta">更新日期：2026年7月28日 · 生效日期：2026年7月28日</p>
+  </header>
+
+  <div class="notice">
+    <strong>摘要：</strong>NewPod 是一款音乐播放工具，不设 NewPod 账号且不含广告。当前版本使用 Firebase Crashlytics 诊断崩溃，并使用 Firebase Analytics 统计应用使用情况；同时支持 Apple Music、用户主动选择的文件导入及在缺少内嵌歌词时查询 LRCLIB。收藏、播放设置及导入的本地音频信息主要保存在设备本地。
+  </div>
+
+  <section>
+    <h2>一、适用范围与我们是谁</h2>
+    <p>本政策适用于广州溯本信息技术有限公司（Suben, Inc.，以下简称“我们”）提供的 NewPod iOS、Android 及其他正式发布版本。我们是本政策所述个人信息处理活动的个人信息处理者。</p>
+    <p>联系方式：<a href="mailto:kevin@subeninc.com">kevin@subeninc.com</a>。第三方服务自行决定处理目的和方式的，由其作为独立个人信息处理者承担责任。</p>
+  </section>
+
+  <section>
+    <h2>二、我们如何处理信息</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>场景</th><th>信息类型</th><th>目的与方式</th><th>保存期限</th></tr></thead>
+        <tbody>
+          <tr><td>Apple Music/系统音乐资料库（仅支持的平台，需授权）</td><td>歌曲、艺人、专辑、时长、封面、媒体标识符、播放状态及是否为云端项目</td><td>通过 Apple 提供的接口读取、展示和播放您授权范围内的内容；我们不会将资料库清单上传至自有服务器</td><td>主要在使用期间读取；Apple 或系统依其规则保存</td></tr>
+          <tr><td>文件导入</td><td>您通过系统文件选择器主动选择的音频文件内容、文件名、路径及可读取的音频元数据</td><td>在设备上导入、分析和播放 FLAC、ALAC、MP3 等主流音频格式</td><td>由文件保存位置、系统缓存和应用内导入状态决定；可通过删除文件、清除应用数据或卸载应用处理</td></tr>
+          <tr><td>在线歌词</td><td>当前歌曲名、艺人名、专辑名和时长</td><td>仅在歌曲没有可用内嵌歌词时，通过加密连接向 LRCLIB 匹配普通或时间轴歌词</td><td>NewPod 仅在应用运行期间内存缓存；LRCLIB 依其规则处理</td></tr>
+          <tr><td>收藏与设置</td><td>收藏音乐的标识符和元数据、播放及界面偏好</td><td>使用设备本地存储记住您的选择</td><td>直至您取消收藏、清除应用数据或卸载应用</td></tr>
+          <tr><td>运动视觉效果（仅 iOS，需授权）</td><td>陀螺仪和加速度计的实时读数</td><td>仅在设备上生成封面和歌词的视差效果</td><td>实时使用，不持久保存，不上传</td></tr>
+          <tr><td>后台播放通知（Android）</td><td>当前播放项目及播放状态</td><td>在系统通知中显示并控制后台播放</td><td>播放期间及系统通知所需期间</td></tr>
+          <tr><td>崩溃诊断（iOS、Android）</td><td>崩溃堆栈、应用和系统版本、设备型号、Firebase 安装 ID 等诊断信息</td><td>通过 Firebase Crashlytics 定位和修复稳定性问题</td><td>依 Firebase 的保留规则处理</td></tr>
+          <tr><td>使用统计（iOS、Android）</td><td>应用交互事件、应用和系统版本、设备型号、语言、区域及 Firebase 安装 ID 等信息</td><td>通过 Firebase Analytics 了解功能使用情况并改进产品体验</td><td>依 Firebase 的保留规则处理</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>我们基于实现您主动请求的功能、履行与您的协议或取得您的同意处理上述信息。拒绝非必要权限不会影响无须该权限的基本功能。NewPod 当前不收集账号、通讯录、精确位置、广告标识符或支付信息。</p>
+  </section>
+
+  <section>
+    <h2>三、设备权限</h2>
+    <ul>
+      <li><strong>媒体与 Apple Music：</strong>用于读取并播放您的系统音乐资料库。可在 iOS“设置 → 隐私与安全性 → 媒体与 Apple Music”中撤回。</li>
+      <li><strong>运动与健身：</strong>用于视差效果。可在 iOS“设置 → 隐私与安全性 → 运动与健身”中撤回，也可关闭应用内对应效果。</li>
+      <li><strong>通知：</strong>Android 可能请求通知权限，以显示后台播放控制；可在系统应用设置中关闭。</li>
+      <li><strong>文件选择：</strong>仅访问您通过系统文件选择器主动选取的音频文件。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>四、第三方服务与信息提供</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>接收方/服务</th><th>用途</th><th>可能处理的信息</th><th>规则</th></tr></thead>
+        <tbody>
+          <tr><td>Apple Inc. 及适用的 Apple 服务运营主体</td><td>系统音乐资料库、Apple Music 内容和播放</td><td>媒体资料库及 Apple 服务使用信息，具体以 Apple 告知为准</td><td><a href="https://www.apple.com.cn/legal/privacy/szh/">Apple 隐私政策</a>；<a href="https://www.apple.com.cn/legal/privacy/data/zh-cn/apple-music/">Apple Music 与隐私</a></td></tr>
+          <tr><td>LRCLIB</td><td>匹配和返回歌词</td><td>歌曲名、艺人名、专辑名和时长；其 <code>/api/get</code> 在内部数据库未命中时可尝试外部来源</td><td><a href="https://lrclib.net/">LRCLIB</a>；<a href="https://lrclib.net/docs">API 文档</a></td></tr>
+          <tr><td>Google Firebase Crashlytics</td><td>崩溃与稳定性诊断</td><td>崩溃堆栈、应用和系统版本、设备型号及 Firebase 安装 ID 等诊断信息</td><td><a href="https://firebase.google.com/support/privacy">Firebase 隐私与安全</a></td></tr>
+          <tr><td>Google Firebase Analytics</td><td>应用使用情况统计</td><td>应用交互事件、应用和系统版本、设备型号、语言、区域及 Firebase 安装 ID 等信息</td><td><a href="https://firebase.google.com/support/privacy">Firebase 隐私与安全</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>上述在线服务可能根据其自身规则独立处理信息。请勿在搜索框中输入身份证号、联系方式、账号密码等无关敏感信息。除上述您主动触发的场景、取得您的另行同意，或法律另有规定外，我们不会向其他主体提供您的个人信息，也不会出售个人信息。</p>
+  </section>
+
+  <section>
+    <h2>五、跨境处理</h2>
+    <p>NewPod 不运营用于接收您个人信息的境外服务器。Apple、LRCLIB 和 Google Firebase 可能根据服务区域、运营安排和适用法律在境外处理上述信息。若我们日后向其他境外接收方提供您的个人信息，我们会依法履行相应告知、同意和个人信息出境程序。</p>
+  </section>
+
+  <section>
+    <h2>六、安全与保存</h2>
+    <p>我们采用系统沙盒、最小权限和传输加密等合理措施保护信息。Apple Music 通信使用 Apple 提供的接口，LRCLIB 查询使用 HTTPS，导入文件主要在设备本地处理。任何措施均无法保证绝对安全，请妥善保护设备及原始音频文件。</p>
+    <p>设备本地信息按第二条所列期限保存。清除应用数据或卸载应用通常会删除应用本地数据，但系统备份、媒体服务数据和第三方服务记录受相应平台规则控制。</p>
+  </section>
+
+  <section>
+    <h2>七、您的权利</h2>
+    <p>您可以在应用和系统设置中查阅、更正、删除本地信息及撤回权限。由于 NewPod 不设账号，无账号注销流程；您可取消收藏、清除应用数据或卸载应用。对我们处理的信息，您还可请求查阅、复制、更正、补充、删除、限制或拒绝处理，并要求解释本政策。</p>
+    <p>请通过 <a href="mailto:kevin@subeninc.com">kevin@subeninc.com</a> 提交请求。为保护安全，我们可能核验与请求相称的必要信息，并将在法律规定期限内答复。涉及 Apple 独立处理的信息，请同时向 Apple 行使权利。</p>
+  </section>
+
+  <section>
+    <h2>八、未成年人</h2>
+    <p>NewPod 不以不满14周岁的未成年人为主要服务对象。未成年人应在监护人指导下使用；不满14周岁的儿童使用涉及个人信息的在线功能前，应取得监护人同意。如我们发现未经监护人同意处理了儿童个人信息，将依法尽快删除或采取其他必要措施。</p>
+  </section>
+
+  <section>
+    <h2>九、政策更新</h2>
+    <p>我们会在处理目的、方式、信息种类或产品功能发生变化时更新本政策，并通过应用内提示或其他显著方式告知。依法需要取得同意的重大变化，我们会重新征得同意，而不会仅以继续使用视为同意。您可保存本页面并查看顶部日期。</p>
+  </section>
+
+  <section>
+    <h2>十、联系我们</h2>
+    <div class="contact">
+      <p>广州溯本信息技术有限公司<br>Suben, Inc.</p>
+      <p>电子邮箱：<a href="mailto:kevin@subeninc.com">kevin@subeninc.com</a></p>
+    </div>
+  </section>
+</main>
+</body>
+</html>

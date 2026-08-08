@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NewPod Privacy Policy</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>NewPod Privacy Policy</h1>
+    <p class="meta">Last updated: July 28, 2026 · Effective: July 28, 2026</p>
+  </header>
+
+  <div class="notice"><strong>Summary:</strong> NewPod is a music player with no NewPod account system or advertising. The current version uses Firebase Crashlytics for crash diagnostics and Firebase Analytics for app-usage measurement. It also supports Apple Music, files you deliberately select for import, and LRCLIB lookup when embedded lyrics are unavailable. Favorites, playback preferences, and imported local-audio information primarily stay on your device.</div>
+
+  <section>
+    <h2>1. Scope and Controller</h2>
+    <p>This Policy applies to official iOS, Android, and other releases of NewPod provided by Suben, Inc. (广州溯本信息技术有限公司) (“we,” “us,” or “our”). We are the controller/personal information processor for the processing described here.</p>
+    <p>Contact: <a href="mailto:kevin@subeninc.com">kevin@subeninc.com</a>. A third-party service is independently responsible where it determines its own purposes and means of processing.</p>
+  </section>
+
+  <section>
+    <h2>2. Information We Process</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Feature</th><th>Information</th><th>Purpose and method</th><th>Retention</th></tr></thead>
+      <tbody>
+        <tr><td>Apple Music/system media library (supported platforms; permission required)</td><td>Song, artist, album, duration, artwork, media identifier, playback state, and cloud-item status</td><td>Use Apple-provided interfaces to display and play content within your authorization; we do not upload your library list to our own servers</td><td>Primarily read during use; Apple or the operating system retains data under its own rules</td></tr>
+        <tr><td>File import</td><td>Audio content, file name, path, and readable metadata of files you deliberately select through the system file picker</td><td>Import, analyze, and play mainstream formats such as FLAC, ALAC, and MP3 on your device</td><td>Determined by file location, system cache, and import state; delete the file, clear app data, or uninstall</td></tr>
+        <tr><td>Online lyrics</td><td>Current track title, artist, album, and duration</td><td>When usable embedded lyrics are unavailable, send these fields over an encrypted connection to LRCLIB to match plain or synchronized lyrics</td><td>NewPod caches results only in memory while the app runs; LRCLIB processes data under its own rules</td></tr>
+        <tr><td>Favorites and settings</td><td>Identifiers and metadata of favorited music and playback/interface preferences</td><td>Stored locally to remember your choices</td><td>Until you remove the favorite, clear app data, or uninstall</td></tr>
+        <tr><td>Motion effects (iOS only; permission required)</td><td>Live gyroscope and accelerometer readings</td><td>Processed only on-device to create parallax effects</td><td>Used in real time; not persistently stored or uploaded</td></tr>
+        <tr><td>Playback notification (Android)</td><td>Current media item and playback state</td><td>Show and control background playback in a system notification</td><td>For the playback session and as needed by the operating system</td></tr>
+        <tr><td>Crash diagnostics (iOS and Android)</td><td>Crash stack traces, app and OS versions, device model, Firebase installation ID, and similar diagnostics</td><td>Diagnose and fix stability issues through Firebase Crashlytics</td><td>Under Firebase retention rules</td></tr>
+        <tr><td>Usage analytics (iOS and Android)</td><td>App interaction events, app and OS versions, device model, language, region, Firebase installation ID, and similar information</td><td>Understand feature usage and improve the product through Firebase Analytics</td><td>Under Firebase retention rules</td></tr>
+      </tbody>
+    </table></div>
+    <p>We process this information to perform features you request, perform our agreement with you, or with your consent. Refusing an optional permission does not prevent use of features that do not need it. NewPod currently does not collect account credentials, contacts, precise location, advertising identifiers, or payment information.</p>
+  </section>
+
+  <section>
+    <h2>3. Device Permissions</h2>
+    <ul>
+      <li><strong>Media &amp; Apple Music:</strong> reads and plays your system music library. Revoke it in iOS Settings under Privacy &amp; Security.</li>
+      <li><strong>Motion &amp; Fitness:</strong> creates parallax effects. Revoke it in iOS Settings or disable the effect in NewPod.</li>
+      <li><strong>Notifications:</strong> Android may request this permission for background playback controls. Disable it in system app settings.</li>
+      <li><strong>File selection:</strong> NewPod accesses only audio files you deliberately choose through the system file picker.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. Third-Party Services and Disclosures</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Recipient/service</th><th>Purpose</th><th>Information</th><th>Terms</th></tr></thead>
+      <tbody>
+        <tr><td>Apple Inc. and applicable Apple service operators</td><td>System media library, Apple Music content, and playback</td><td>Media-library and Apple-service usage data as disclosed by Apple</td><td><a href="https://www.apple.com/legal/privacy/en-ww/">Apple Privacy Policy</a>; <a href="https://www.apple.com/legal/privacy/data/en/apple-music/">Apple Music &amp; Privacy</a></td></tr>
+        <tr><td>LRCLIB</td><td>Match and return lyrics</td><td>Track title, artist, album, and duration; its <code>/api/get</code> may try external sources when its internal database has no match</td><td><a href="https://lrclib.net/">LRCLIB</a>; <a href="https://lrclib.net/docs">API documentation</a></td></tr>
+        <tr><td>Google Firebase Crashlytics</td><td>Crash and stability diagnostics</td><td>Crash stack traces, app and OS versions, device model, Firebase installation ID, and similar diagnostics</td><td><a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a></td></tr>
+        <tr><td>Google Firebase Analytics</td><td>App-usage measurement</td><td>App interaction events, app and OS versions, device model, language, region, Firebase installation ID, and similar information</td><td><a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a></td></tr>
+      </tbody>
+    </table></div>
+    <p>These services may process information independently under their own terms. Do not enter identification numbers, contact details, passwords, or unrelated sensitive data in search fields. We do not sell personal information. We disclose it only in the user-initiated cases above, with separate consent, or where permitted or required by law.</p>
+  </section>
+
+  <section>
+    <h2>5. International Processing</h2>
+    <p>NewPod does not operate an overseas server that receives your personal information. Apple, LRCLIB, and Google Firebase may process the information described above internationally depending on service region, operations, and applicable law. If we later disclose personal information to another overseas recipient, we will provide legally required notice, obtain consent where required, and complete applicable transfer procedures.</p>
+  </section>
+
+  <section>
+    <h2>6. Security and Retention</h2>
+    <p>We use reasonable safeguards such as platform sandboxing, least-privilege access, and transport encryption. Apple Music uses Apple-provided interfaces, LRCLIB queries use HTTPS, and imported files are primarily processed on-device. No safeguard can guarantee absolute security, so please protect your device and original audio files.</p>
+    <p>On-device information is retained for the periods in Section 2. Clearing app data or uninstalling normally removes local app data, but operating-system backups, media-service data, and third-party records are controlled by the relevant provider.</p>
+  </section>
+
+  <section>
+    <h2>7. Your Rights</h2>
+    <p>You can access, correct, and delete local information and revoke permissions through NewPod and system settings. NewPod has no account to close; remove favorites, clear app data, or uninstall instead. You may also ask us to access, copy, correct, supplement, delete, restrict, or object to processing, and to explain this Policy, subject to applicable law.</p>
+    <p>Email <a href="mailto:kevin@subeninc.com">kevin@subeninc.com</a>. We may verify only what is reasonably necessary to protect your request and will respond within the period required by law. Contact Apple directly for information it processes independently.</p>
+  </section>
+
+  <section>
+    <h2>8. Children</h2>
+    <p>NewPod is not directed primarily to children under 14. Minors should use it with a guardian's guidance. A child under 14 should obtain guardian consent before using online features involving personal information. If we learn that we processed a child's information without the required consent, we will promptly delete it or take other steps required by law.</p>
+  </section>
+
+  <section>
+    <h2>9. Policy Changes</h2>
+    <p>We will update this Policy when processing purposes, methods, data categories, or product features change, and provide an in-app or similarly prominent notice. Where law requires consent for a material change, we will ask again rather than treating continued use alone as consent.</p>
+  </section>
+
+  <section>
+    <h2>10. Contact</h2>
+    <div class="contact"><p>Suben, Inc.<br>广州溯本信息技术有限公司</p><p>Email: <a href="mailto:kevin@subeninc.com">kevin@subeninc.com</a></p></div>
+  </section>
+</main>
+</body>
+</html>
