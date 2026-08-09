@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>用户群 | NewPod</title>
+  <meta name="description" content="NewPod iOS 用户群">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f5f7;
+      --surface: #ffffff;
+      --text-primary: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --text-tertiary: #aeaeb2;
+      --accent: #0071e3;
+      --border: rgba(0,0,0,0.08);
+      --shadow: 0 2px 20px rgba(0,0,0,0.08), 0 0 0 0.5px rgba(0,0,0,0.04);
+      --radius: 18px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1c1c1e;
+        --surface: #2c2c2e;
+        --text-primary: #f5f5f7;
+        --text-secondary: #98989d;
+        --text-tertiary: #48484a;
+        --accent: #2997ff;
+        --border: rgba(255,255,255,0.08);
+        --shadow: 0 2px 20px rgba(0,0,0,0.4), 0 0 0 0.5px rgba(255,255,255,0.04);
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 380px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Brand */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .brand-name {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: var(--text-primary);
+    }
+
+    /* Card */
+    .card {
+      width: 100%;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .card-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      padding: 24px 24px 16px;
+      text-align: center;
+    }
+
+    .qr-wrap {
+      position: relative;
+      width: 100%;
+    }
+
+    .qr-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .badge {
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      padding: 10px 0 4px;
+      letter-spacing: 0.2px;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin-top: 16px;
+    }
+
+    /* Expiry */
+    .expiry {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      padding: 14px 24px 20px;
+      justify-content: center;
+    }
+
+    .expiry-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ff9f0a;
+      flex-shrink: 0;
+    }
+
+    /* Disclosure */
+    .disclosure {
+      width: 100%;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .disclosure summary {
+      list-style: none;
+      padding: 16px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      transition: background 0.15s;
+    }
+
+    .disclosure summary::-webkit-details-marker { display: none; }
+
+    .disclosure summary:hover {
+      background: var(--border);
+    }
+
+    .chevron {
+      width: 18px;
+      height: 18px;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .disclosure[open] .chevron {
+      transform: rotate(180deg);
+    }
+
+    .disclosure-body {
+      padding: 0 20px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .disclosure-body img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .contact-text {
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .contact-text code {
+      font-family: "SF Mono", "Menlo", monospace;
+      font-size: 13px;
+      background: var(--bg);
+      padding: 2px 8px;
+      border-radius: 6px;
+      color: var(--text-primary);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 22px;
+      border-radius: 980px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent);
+      background: transparent;
+      border: 1.5px solid var(--accent);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* Footer */
+    .footer {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      text-align: center;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="brand">
+      <span class="brand-name">NewPod</span>
+    </div>
+
+    <div class="card">
+      <span class="card-title">微信用户群</span>
+
+      <div class="qr-wrap">
+        <img src="img/user_group.png" alt="用户群二维码">
+        <span class="badge">长按或扫码入群</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="expiry">
+        <span class="expiry-dot"></span>
+        <span>二维码有效期至 8月14日</span>
+      </div>
+    </div>
+
+    <details class="disclosure">
+      <summary>
+        群码失效？联系我们
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </summary>
+      <div class="disclosure-body">
+        <img src="img/myVX.png" alt="客服微信">
+        <p class="contact-text">添加微信 <code>pZero6</code><br>邀请进群</p>
+        <a class="btn" href="https://work.weixin.qq.com/kfid/kfcfbda3d48d717ae87">联系在线客服</a>
+      </div>
+    </details>
+
+    <p class="footer">© NewPod · iOS 用户社群</p>
+
+  </div>
+</body>
+</html>
